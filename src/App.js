@@ -1,10 +1,11 @@
 import React from 'react';
+import List from './components/List';
 
 function App() {
   return (
   <div className='todo'>
     <div className="todo__sidebar">
-      <button>Hello</button>
+      <List />
     </div>
     <div className="todo__tasks">
 

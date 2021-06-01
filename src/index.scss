@@ -19,13 +19,37 @@
   box-shadow: 2px 2px 19px #dbdbdbe6;
   border-radius: 10px;
   border: 1px solid #F1F1F1;
+  font-size: 14px;
 
   &__sidebar{
+    padding-top: 60px;
+    padding-left: 30px;
     background-color: #F4F6F8;
     width: 200px;
     height: 100%;
     border-right: 1px solid #F1F1F1;
     
+  }
+  &__list {
+    li {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px 12px;
+      margin-bottom: 5px;
+      &.active{
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+      }
+      i {
+        display: inline-flex;
+        margin-right: 10px;
+        img {
+          opacity: 0.6;
+        }
+      }
+    }
   }
 }
 
