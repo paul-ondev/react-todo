@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.todo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height:   530px;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 19px #dbdbdbe6;
+  border-radius: 10px;
+  border: 1px solid #F1F1F1;
+
+  &__sidebar{
+    background-color: #F4F6F8;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #F1F1F1;
+    
+  }
+}
+
