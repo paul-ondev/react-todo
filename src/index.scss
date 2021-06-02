@@ -1,55 +1,32 @@
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
   outline: none;
-  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+  font-family: "Roboto", -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-.todo{
+.todo {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 750px;
-  height:   530px;
+  height: 530px;
   transform: translate(-50%, -50%);
   box-shadow: 2px 2px 19px #dbdbdbe6;
   border-radius: 10px;
-  border: 1px solid #F1F1F1;
+  border: 1px solid #f1f1f1;
   font-size: 14px;
 
-  &__sidebar{
+  &__sidebar {
     padding-top: 60px;
     padding-left: 30px;
-    background-color: #F4F6F8;
+    padding-right: 30px;
+    background-color: #f4f6f8;
     width: 200px;
     height: 100%;
-    border-right: 1px solid #F1F1F1;
-    
-  }
-  &__list {
-    li {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      padding: 10px 12px;
-      margin-bottom: 5px;
-      &.active{
-        background: #FFFFFF;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-        border-radius: 4px;
-      }
-      i {
-        display: inline-flex;
-        margin-right: 10px;
-        img {
-          opacity: 0.6;
-        }
-      }
-    }
+    border-right: 1px solid #f1f1f1;
   }
 }
-
