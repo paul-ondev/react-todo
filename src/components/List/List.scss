@@ -1,5 +1,12 @@
 .list {
   margin-bottom: 30px;
+  &__add-button {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
   li {
     display: flex;
     align-items: center;
@@ -14,10 +21,10 @@
       display: inline-flex;
       margin-right: 10px;
       img {
-        opacity: 0.6;
-        margin-right: 6px;
+        margin-right: 4px;
       }
     }
+
     .badge {
       width: 10px;
       height: 10px;

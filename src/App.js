@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "./components/List/index";
+import AddListButton from "./components/AddListButton/index";
 import listIcon from "./assets/img/listIcon.svg";
 
 function App() {
@@ -38,7 +39,9 @@ function App() {
               name: "Личное",
             },
           ]}
+          isRemovable
         />
+        <AddListButton />
       </div>
       <div className="todo__tasks"></div>
     </div>
