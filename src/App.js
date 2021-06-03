@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import List from "./components/List/index";
-import AddListButton from "./components/AddListButton/index";
+import AddList from "./components/AddList/index";
+import DB from "./assets/db.json";
 import listIcon from "./assets/img/listIcon.svg";
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
               name: "Фильмы и сериалы",
             },
             {
-              color: "light-green",
+              color: "lime",
               name: "Книги",
             },
             {
@@ -41,7 +42,7 @@ function App() {
           ]}
           isRemovable
         />
-        <AddListButton />
+        <AddList colors={DB.colors} />
       </div>
       <div className="todo__tasks"></div>
     </div>
