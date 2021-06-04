@@ -1,4 +1,6 @@
 .list {
+  $self: &;
+
   margin-bottom: 20px;
   &__add-button {
     opacity: 0.5;
@@ -7,11 +9,27 @@
       opacity: 1;
     }
   }
+
   li {
     display: flex;
     align-items: center;
     cursor: pointer;
     padding: 8px 12px;
+
+    &:hover #{$self}__remove-icon {
+      opacity: 0.2;
+    }
+
+    #{$self}__remove-icon {
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    span {
+      flex: 1;
+    }
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
     }
