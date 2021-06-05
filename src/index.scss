@@ -19,6 +19,7 @@
   border-radius: 10px;
   border: 1px solid #f1f1f1;
   font-size: 14px;
+  display: flex;
 
   &__sidebar {
     padding-top: 50px;
@@ -30,7 +31,17 @@
     height: calc(100% - 100px);
     border-right: 1px solid #f1f1f1;
   }
+
+  &__tasks{
+    flex: 1;
+    padding: 56px;
+    
+  }
+  
+  
 }
+
+
 
 .button {
   width: 200px;
