@@ -64,6 +64,18 @@
     }
     &__items{
         margin-top: 30px;
+
+        h2{
+            font-family: Montserrat;
+            font-weight: bold;
+            font-size: 22px;
+            text-align: center;
+            color: #C9D1D3;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+        }
         &-row{
             display: flex;
             align-items: center;

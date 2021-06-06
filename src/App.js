@@ -10,6 +10,7 @@ function App() {
 
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
     axios
@@ -26,6 +27,17 @@ function App() {
     const newList = [...lists, obj];
     setLists(newList);
   };
+
+  const onEditListTitle = (id, title) => {
+    const newList = lists.map( item => {
+      if (item.id === id) {
+        item.name = title;
+      }
+      return item;
+    });
+    setLists(newList);
+  };
+
   return (
     <div className="todo">
       <div className="todo__sidebar">
@@ -38,18 +50,23 @@ function App() {
             },
           ]}
         />
-        { lists ? (<List
+        { lists ? 
+          (<List
           items={lists}
-          isRemovable
+          activeItem={activeItem}
+          onClickItem={item => setActiveItem(item)}
           onRemove={(id) => {
             const newLists = lists.filter(listItem =>  listItem.id !== id );
             setLists(newLists);
           }}
+          isRemovable
+
         />) : ( 'Loading...' )}
+        
         <AddList onAdd={onAddList} colors={colors} />
       </div>
       <div className="todo__tasks">
-        { lists && <Tasks list={lists[1]} />}
+        { lists && activeItem && <Tasks list={activeItem} onEditTitle={onEditListTitle} />}
         
       </div>
     </div>
