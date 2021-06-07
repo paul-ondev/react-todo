@@ -8,11 +8,13 @@ import Badge from '../Badge/index';
 
 import './List.scss';
 
-function List({ items, isRemovable, onClick, onRemove, onClickItem, activeItem }) {
+function List({ items, isRemovable, onClick, onRemove, ItemClick, activeItem }) {
   
   const removeList = (item) => {
     if (window.confirm("Удалить этот список?")) {
-      axios.delete('http://localhost:3001/lists/' + item.id).then(() => {
+      axios
+      .delete('http://localhost:3001/lists/' + item.id)
+      .then(() => {
         onRemove(item.id);
       });
     }
@@ -21,7 +23,7 @@ function List({ items, isRemovable, onClick, onRemove, onClickItem, activeItem }
     return (
       <ul onClick={onClick} className='list' >
         {items.map((item, index) => (
-          <li onClick={() => onClickItem(item)} className={classNames(item.className, {active: activeItem && activeItem.id === item.id})} key={index}>
+          <li onClick={ItemClick ? () => ItemClick(item) : null} className={classNames(item.className, {active: activeItem && activeItem.id === item.id})} key={index}>
             <i> {item.icon ? <img src={item.icon} alt="List icon" /> : 
               <Badge color={item.color.name} />}
               

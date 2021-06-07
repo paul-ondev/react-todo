@@ -10,7 +10,7 @@ function AddList({ colors, onAdd }) {
     const [visiblePopup, setVisiblePopup] = useState(false);
     const [selectedColor, setColor] = useState(3);
     const [isLoading, setIsLoading] = useState(false);
-    const [inputValue, setinputValue] = useState('');
+    const [inputValue, setInputValue] = useState('');
 
     useEffect(() => {
         if (Array.isArray(colors)) {
@@ -21,7 +21,7 @@ function AddList({ colors, onAdd }) {
 
     const onClose = () => {
         setVisiblePopup(false);
-        setinputValue('');
+        setInputValue('');
         setColor(colors[0].id);
     }
 
@@ -32,7 +32,7 @@ function AddList({ colors, onAdd }) {
         }
         setIsLoading(true);
         axios
-        .post('http://localhost:3001/lists', {name: inputValue, colorId: selectedColor})
+        .post('http://localhost:3001/lists', {name: inputValue, colorId: selectedColor, tasks: []})
         .then(({data}) => {
             const color = colors.filter(c => c.id === selectedColor)[0].name;
             const listObj = {...data, color: {name: color}};
@@ -48,7 +48,7 @@ function AddList({ colors, onAdd }) {
     return(
         <div className="add-list">
             <List
-                onClick={() => setVisiblePopup(true)}
+                onClick={() => {setVisiblePopup(true)}}
                 items={[
                 {
                     className: "list__add-button",
@@ -60,7 +60,7 @@ function AddList({ colors, onAdd }) {
             {visiblePopup && (
             <div className="add-list__popup">
                 <img onClick={onClose} className="add-list__popup-close-btn" src={closeIcon} alt="Close Button"/>
-                <input onChange={e => setinputValue(e.target.value)} value={inputValue} className="field" type="text" placeholder="Название списка" />
+                <input onChange={e => setInputValue(e.target.value)} value={inputValue} className="field" type="text" placeholder="Название списка" />
                 <div className="add-list__popup-colors">
                     
                     {

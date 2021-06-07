@@ -28,6 +28,16 @@ function App() {
     setLists(newList);
   };
 
+  const onAddTask = (listId, taskObj) => {
+    const newList = lists.map( item => {
+      if (item.id === listId) {
+        item.tasks = [...item.tasks, taskObj];
+      }
+      return item;
+    });
+    setLists(newList);
+  };
+
   const onEditListTitle = (id, title) => {
     const newList = lists.map( item => {
       if (item.id === id) {
@@ -54,10 +64,13 @@ function App() {
           (<List
           items={lists}
           activeItem={activeItem}
-          onClickItem={item => setActiveItem(item)}
+          ItemClick={item => {
+            setActiveItem(item);
+          }}
           onRemove={(id) => {
             const newLists = lists.filter(listItem =>  listItem.id !== id );
             setLists(newLists);
+            setActiveItem(null);
           }}
           isRemovable
 
@@ -66,7 +79,7 @@ function App() {
         <AddList onAdd={onAddList} colors={colors} />
       </div>
       <div className="todo__tasks">
-        { lists && activeItem && <Tasks list={activeItem} onEditTitle={onEditListTitle} />}
+        { lists && activeItem && <Tasks list={activeItem} onAddTask={onAddTask} onEditTitle={onEditListTitle} />}
         
       </div>
     </div>

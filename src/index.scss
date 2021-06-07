@@ -52,11 +52,25 @@
   color: #ffffff;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
+
   &:hover {
     background-color: darken(#4dd599, 6%);
   }
   &:active {
     background-color: darken(#4dd599, 10%);
+  }
+
+  &--grey{
+    background-color: #F4F6F8;
+    color: #444444;
+    width: 95px;
+    &:hover {
+      background-color: darken(#F4F6F8, 3%);
+    }
+    &:active {
+      background-color: darken(#F4F6F8, 6%);
+    }
   }
 }
 
@@ -67,6 +81,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 12px;
+  font-size: 14px;
 
   &:focus {
     border-color: #e6e4e4;
