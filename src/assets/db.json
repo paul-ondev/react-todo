@@ -27,21 +27,18 @@
       "id": 9
     },
     {
-      "name": "asdas",
-      "colorId": 4,
-      "tasks": [],
+      "name": "fsdfdsff",
+      "colorId": 7,
       "id": 10
     },
     {
-      "name": "sad",
-      "colorId": 5,
-      "tasks": [],
+      "name": "sdfsdfd",
+      "colorId": 8,
       "id": 11
     },
     {
-      "name": "ewqeqwe",
-      "colorId": 4,
-      "tasks": [],
+      "name": "asdasd",
+      "colorId": 3,
       "id": 12
     }
   ],
@@ -195,6 +192,18 @@
     {
       "text": "dfsasd 2.0",
       "id": 44
+    },
+    {
+      "listId": 11,
+      "text": "dsadasd",
+      "completed": false,
+      "id": 45
+    },
+    {
+      "listId": 11,
+      "text": "dfdfdf",
+      "completed": false,
+      "id": 46
     }
   ],
   "colors": [

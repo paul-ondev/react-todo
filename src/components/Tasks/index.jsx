@@ -30,8 +30,8 @@ const Tasks = ({ list, onEditTitle, onAddTask, onRemoveTask, onEditTask, without
 
       <div className="tasks__items">
 
-        {!withoutEmpty && !list.tasks.length && <h2>Задачи отсутствуют</h2>}
-        {list.tasks.map(task =>
+        {!withoutEmpty && list.tasks && !list.tasks.length && <h2>Задачи отсутствуют</h2>}
+        {list.tasks && list.tasks.map(task =>
           <Task key={task.id || task.text} list={list} onEdit={onEditTask} onRemove={onRemoveTask} {...task} />
         )
         }

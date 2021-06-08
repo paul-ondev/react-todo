@@ -13,7 +13,7 @@ function App() {
   const [colors, setColors] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
   let history = useHistory();
-  //looks like bug with routing
+  //looks like a bug with routing
   let location = useLocation();
 
   useEffect(() => {
