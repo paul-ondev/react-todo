@@ -13,7 +13,9 @@
   top: 50%;
   left: 50%;
   width: 750px;
-  height: 530px;
+  //height: 530px;
+  width: calc(100vw - 10px);
+  height: calc(100vh - 10px);
   transform: translate(-50%, -50%);
   box-shadow: 2px 2px 19px #dbdbdbe6;
   border-radius: 10px;
@@ -35,7 +37,7 @@
   &__tasks{
     flex: 1;
     padding: 56px;
-    
+    overflow: auto;
   }
   
   
@@ -59,6 +61,10 @@
   }
   &:active {
     background-color: darken(#4dd599, 10%);
+  }
+
+  &:disabled {
+    background-color: #b0b0b0;
   }
 
   &--grey{
