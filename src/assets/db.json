@@ -2,12 +2,12 @@
   "lists": [
     {
       "id": 1,
-      "name": "Продажи 2",
+      "name": "Продажи",
       "colorId": 5
     },
     {
       "id": 2,
-      "name": "Фронтенд 2",
+      "name": "Фронтенд",
       "colorId": 4
     },
     {
@@ -19,12 +19,6 @@
       "name": "Курс по ReactJS ToDo",
       "colorId": 7,
       "id": 7
-    },
-    {
-      "name": "Class 300hjghj",
-      "colorId": 6,
-      "tasks": [],
-      "id": 9
     }
   ],
   "tasks": [
@@ -107,32 +101,8 @@
       "id": 18
     },
     {
-      "listId": 9,
-      "text": "bfxcbc",
-      "completed": false,
-      "id": 28
-    },
-    {
       "listId": 3,
-      "text": "fdfd",
-      "completed": false,
-      "id": 30
-    },
-    {
-      "listId": 3,
-      "text": "fdfdfdsgsg",
-      "completed": true,
-      "id": 31
-    },
-    {
-      "listId": 3,
-      "text": "fdfsdf",
-      "completed": false,
-      "id": 32
-    },
-    {
-      "listId": 3,
-      "text": " sdasd",
+      "text": "Джентельмены",
       "completed": false,
       "id": 33
     },
@@ -141,18 +111,24 @@
       "id": 35
     },
     {
-      "listId": 9,
-      "text": 42,
-      "completed": true,
-      "id": 42
-    },
-    {
       "text": "14",
       "id": 43
     },
     {
       "text": "dfsasd 2.0",
       "id": 44
+    },
+    {
+      "listId": 3,
+      "text": "Интерстеллар",
+      "completed": true,
+      "id": 45
+    },
+    {
+      "listId": 7,
+      "text": "refactoring",
+      "completed": false,
+      "id": 46
     }
   ],
   "colors": [
