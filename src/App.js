@@ -42,6 +42,24 @@ function App() {
     setLists(newList);
   };
 
+  const onCompleteTask = (listId, taskId, completed) => {
+    const newList = lists.map(item => {
+      if (item.id === listId) {
+        item.tasks = item.tasks.map(task => {
+          if (task.id === taskId) {
+            task.completed = completed;
+          }
+          return task;
+        });
+      }
+      return item;
+    });
+    setLists(newList);
+    axios
+      .patch('http://localhost:3001/tasks/' + taskId, { completed })
+      .catch(() => {alert("Не удалось изменить статус задачи")})
+  }
+
   const onEditTask = (listId, taskObj) => {
     let newText = window.prompt("Редактируйте название задачи", taskObj.text);
     if(!newText) {
@@ -139,8 +157,11 @@ function App() {
                 <Tasks
                   key={list.id}
                   list={list} 
+                  onEditTitle={onEditListTitle}
+                  onCompleteTask={onCompleteTask}
                   onAddTask={onAddTask} 
-                  onEditTitle={onEditListTitle} 
+                  onRemoveTask={onRemoveTask}
+                  onEditTask={onEditTask} 
                   withoutEmpty
                 />
             ))}
@@ -149,8 +170,9 @@ function App() {
             { lists && activeItem && (
               <Tasks 
                 list={activeItem} 
-                onAddTask={onAddTask} 
                 onEditTitle={onEditListTitle}
+                onCompleteTask={onCompleteTask}
+                onAddTask={onAddTask} 
                 onRemoveTask={onRemoveTask}
                 onEditTask={onEditTask}
               />)

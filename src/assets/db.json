@@ -25,21 +25,6 @@
       "colorId": 6,
       "tasks": [],
       "id": 9
-    },
-    {
-      "name": "fsdfdsff",
-      "colorId": 7,
-      "id": 10
-    },
-    {
-      "name": "sdfsdfd",
-      "colorId": 8,
-      "id": 11
-    },
-    {
-      "name": "asdasd",
-      "colorId": 3,
-      "id": 12
     }
   ],
   "tasks": [
@@ -94,7 +79,7 @@
     {
       "listId": 1,
       "text": "123",
-      "completed": false,
+      "completed": true,
       "id": 9
     },
     {
@@ -122,30 +107,6 @@
       "id": 18
     },
     {
-      "listId": 7,
-      "text": "no 2",
-      "completed": false,
-      "id": 21
-    },
-    {
-      "listId": 7,
-      "text": "55555555",
-      "completed": false,
-      "id": 24
-    },
-    {
-      "listId": 7,
-      "text": "1",
-      "completed": false,
-      "id": 25
-    },
-    {
-      "listId": 7,
-      "text": "854",
-      "completed": false,
-      "id": 27
-    },
-    {
       "listId": 9,
       "text": "bfxcbc",
       "completed": false,
@@ -160,7 +121,7 @@
     {
       "listId": 3,
       "text": "fdfdfdsgsg",
-      "completed": false,
+      "completed": true,
       "id": 31
     },
     {
@@ -182,7 +143,7 @@
     {
       "listId": 9,
       "text": 42,
-      "completed": false,
+      "completed": true,
       "id": 42
     },
     {
@@ -192,18 +153,6 @@
     {
       "text": "dfsasd 2.0",
       "id": 44
-    },
-    {
-      "listId": 11,
-      "text": "dsadasd",
-      "completed": false,
-      "id": 45
-    },
-    {
-      "listId": 11,
-      "text": "dfdfdf",
-      "completed": false,
-      "id": 46
     }
   ],
   "colors": [
